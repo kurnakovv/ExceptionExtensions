@@ -7,4 +7,4 @@
 </div>
 
 # Description
-<b>ExceptionExtensions</b> is a open source library with useful methods for working with exceptions
+<b>ExceptionExtensions</b> is open source library with useful methods for working with exceptions
