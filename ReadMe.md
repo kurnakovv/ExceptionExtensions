@@ -13,7 +13,7 @@
 <b>ExceptionExtensions</b> is open source library with useful methods for working with exceptions
 
 # How is it work
-If you need handle exception, you actialy do something like that:
+If you need to handle an exception, you do something like this:
 ``` cs
 try
 {
@@ -26,7 +26,7 @@ catch (Exception ex)
     // Work with message.
 }
 ```
-It is not useful and readable, but you can use this library:
+It is not usable and not readable, but you can use this library:
 ``` cs
 try
 {
