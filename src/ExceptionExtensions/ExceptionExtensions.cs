@@ -6,6 +6,13 @@ namespace ExceptionExtensions
 {
     public static class ExceptionExstension
     {
+        /// <summary>
+        /// Get full exception info.
+        /// </summary>
+        /// <remarks>If <paramref name="ex"/> is null, method return null.</remarks>
+        /// <param name="ex">Exception with full info.</param>
+        /// <exception cref="ArgumentOutOfRangeException"/>
+        /// <returns>Message + InnerException + StackTrace</returns>
         public static string GetFullInfo(this Exception ex)
         {
             if (ex == null) return null;
