@@ -2,6 +2,37 @@
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <PackageId>Kurnakov.ExceptionExtensions</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>KurnakovMaksim</Authors>
+    <Company>KurnakovMaksim</Company>
+    <Product>ExceptionExtensions</Product>
+    <Description>ExceptionExtensions is open source library with useful methods for working with exceptions</Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>ReadMeForNuget.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/KurnakovMaksim/ExceptionExtensions</RepositoryUrl>
+    <PackageTags>exception;exceptions;extensions;exception extensions;</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	  <AssemblyName>Kurnakov.ExceptionExtensions</AssemblyName>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\ReadMeForNuget.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+	  <None Include="..\..\LICENSE">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+	  </None>
+  </ItemGroup>
 
 </Project>
