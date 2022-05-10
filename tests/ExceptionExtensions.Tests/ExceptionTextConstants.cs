@@ -6,6 +6,6 @@
 Index was outside the bounds of the array.
 ==========================================
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   at ExceptionExtensions.Tests.ExceptionExtensionsTests.GetFullInfo_CanGetFullExceptionInfo_FullException() in D:\C#\MyNugets\ExceptionExtensions\tests\ExceptionExtensions.Tests\ExceptionExtensionsTests.cs";
+   at ExceptionExtensions.Tests.ExceptionExtensionsTests.GetFullInfo_CanGetFullExceptionInfo_FullException() in";
     }
 }
