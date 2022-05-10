@@ -11,3 +11,41 @@
 
 # Description
 <b>ExceptionExtensions</b> is open source library with useful methods for working with exceptions
+
+# How is it work
+If you need handle exception, you actialy do something like that:
+``` cs
+try
+{
+    string[] array = new string[4] { "1", "2", "3", "4" };
+    int invalidElement = array[5].Length;
+}
+catch (Exception ex)
+{
+    string message = $"{ex.Message} {ex.StackTrace} {ex.InnerException}"; // Or something else...
+    // Work with message.
+}
+```
+It is not useful and readable, but you can use this library:
+``` cs
+try
+{
+    string[] array = new string[4] { "1", "2", "3", "4" };
+    int invalidElement = array[5].Length;
+}
+catch (Exception ex)
+{
+    string message = ex.GetFullInfo();
+    // Work with full message.
+}
+```
+Output:
+```
+==========================================
+Index was outside the bounds of the array.
+==========================================
+-------------------------------------------------------------------------------------------------------------
+   at JustApplication.Program.Main(String[] args) in D:\C#\JustApplication\JustApplication\Program.cs:line 32
+-------------------------------------------------------------------------------------------------------------
+
+```
