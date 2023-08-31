@@ -8,7 +8,7 @@
   [![MIT License](https://img.shields.io/github/license/KurnakovMaksim/ExceptionExtensions?color=%230b0&style=flat)](https://github.com/KurnakovMaksim/ExceptionExtensions/blob/main/LICENSE)
  [![Build/Test](https://github.com/KurnakovMaksim/ExceptionExtensions/actions/workflows/build-test.yml/badge.svg)](https://github.com/KurnakovMaksim/ExceptionExtensions/actions/workflows/build-test.yml)
  [![CodeQL](https://github.com/KurnakovMaksim/ExceptionExtensions/workflows/CodeQL/badge.svg)](https://github.com/KurnakovMaksim/ExceptionExtensions/actions?query=workflow%3ACodeQL)
- [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=KurnakovMaksim_ExceptionExtensions&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=KurnakovMaksim_ExceptionExtensions) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=KurnakovMaksim_ExceptionExtensions&metric=coverage)](https://sonarcloud.io/summary/new_code?id=KurnakovMaksim_ExceptionExtensions)
+ [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kurnakovv_ExceptionExtensions&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kurnakovv_ExceptionExtensions) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=kurnakovv_ExceptionExtensions&metric=coverage)](https://sonarcloud.io/summary/new_code?id=kurnakovv_ExceptionExtensions)
 
 </div>
 
