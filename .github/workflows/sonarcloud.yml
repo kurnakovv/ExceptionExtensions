@@ -28,7 +28,7 @@ jobs:
            echo "::set-output name=have_sonar_token::false"
          fi
   build:
-    needs: [check-registry-secrets]
+    needs: [check-sonar-token]
     if: needs.filter-folder.outputs.have_sonar_token == 'true'
     name: Build
     runs-on: windows-latest
