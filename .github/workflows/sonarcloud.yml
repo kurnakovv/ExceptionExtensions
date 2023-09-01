@@ -29,7 +29,7 @@ jobs:
          fi
   build:
     needs: [check-sonar-token]
-    if: needs.filter-folder.outputs.have_sonar_token == 'true'
+    if: needs.check-sonar-token.outputs.have_sonar_token == 'true'
     name: Build
     runs-on: windows-latest
     steps:
