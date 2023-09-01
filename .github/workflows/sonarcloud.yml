@@ -4,10 +4,12 @@ on:
     branches: [ main ]
     paths:
       - '**.cs'
+      - '**.yml'
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - '**.cs'
+      - '**.yml'
 jobs:
   build:
     name: Build
@@ -58,7 +60,7 @@ jobs:
         shell: powershell
         run: |
           dotnet tool install --global dotnet-coverage
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"KurnakovMaksim_ExceptionExtensions" /o:"kurnakovmaksim" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"kurnakovv_ExceptionExtensions" /o:"kurnakovmaksim" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
           dotnet restore
           dotnet build --no-restore
           dotnet test --no-build --verbosity normal
