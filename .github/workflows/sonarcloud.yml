@@ -1,7 +1,7 @@
 name: SonarCloud
 on:
   push:
-    branches: [ main, ee-18 ]
+    branches: [ main ]
     paths:
       - '**.cs'
       - '**.yml'
