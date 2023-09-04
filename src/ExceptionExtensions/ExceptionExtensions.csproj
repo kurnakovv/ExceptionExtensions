@@ -18,6 +18,8 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	  <AssemblyName>Kurnakov.ExceptionExtensions</AssemblyName>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <Title>ExceptionExtensions</Title>
+	  <PackageProjectUrl>https://github.com/kurnakovv/ExceptionExtensions</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
