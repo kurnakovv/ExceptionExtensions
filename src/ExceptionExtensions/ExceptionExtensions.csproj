@@ -18,6 +18,8 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	  <AssemblyName>Kurnakov.ExceptionExtensions</AssemblyName>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <Title>ExceptionExtensions</Title>
+	  <PackageProjectUrl>https://github.com/kurnakovv/ExceptionExtensions</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,6 +35,17 @@
 		  <Pack>True</Pack>
 		  <PackagePath>\</PackagePath>
 	  </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MinVer" Version="4.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
