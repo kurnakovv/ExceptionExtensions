@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ExceptionExtensions
 {
+    /// <summary>
+    /// <seealso cref="ExceptionExstension"/> is a class with useful methods for working with exceptions.
+    /// </summary>
     public static class ExceptionExstension
     {
         /// <summary>
