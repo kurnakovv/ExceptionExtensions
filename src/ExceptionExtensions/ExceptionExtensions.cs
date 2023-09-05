@@ -20,7 +20,9 @@ namespace ExceptionExtensions
         {
             if (ex == null) return null;
             var stringBuilder = new StringBuilder();
-            stringBuilder.AppendLine(new string('=', ex.Message.Length));
+            string source = $"Source: {ex.Source ?? "-- No source --"}";
+            stringBuilder.AppendLine(source);
+            stringBuilder.AppendLine(new string('=', source.Length));
             if (ex.InnerException != null)
             {
                 stringBuilder.AppendLine(ex.InnerException.GetFullInfo());
