@@ -28,6 +28,28 @@ namespace ExceptionExtensions.Tests
         }
 
         [Fact]
+        public void GetFullInfo_CanGetSource_ExceptionSource()
+        {
+            // Arrange.
+            string message = null;
+
+            // Act
+            try
+            {
+                string[] array = new string[4] { "1", "2", "3", "4" };
+                int invalidElement = array[5].Length;
+            }
+            catch (Exception ex)
+            {
+                message = ex.GetFullInfo();
+            }
+
+            // Assert.
+            Assert.NotNull(message);
+            Assert.Contains(ExceptionTextConstants.SOURCE_MESSAGE, message);
+        }
+
+        [Fact]
         public void GetFullInfo_CannotGetFullInfoIfExceptionIsNull_Null()
         {
             // Arrange.
