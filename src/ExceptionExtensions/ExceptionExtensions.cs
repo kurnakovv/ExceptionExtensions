@@ -22,7 +22,7 @@ namespace ExceptionExtensions
             var stringBuilder = new StringBuilder();
             string source = $"Source: {ex.Source ?? "-- No source --"}";
             stringBuilder.AppendLine(source);
-            stringBuilder.AppendLine(new string('=', source.Length));
+            stringBuilder.AppendLine(new string('#', source.Length));
             if (ex.InnerException != null)
             {
                 stringBuilder.AppendLine(ex.InnerException.GetFullInfo());
