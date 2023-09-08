@@ -1,5 +1,5 @@
 <div align="center">
- <img src="icon.png" weight="500px" height="300px" />
+ <img src="icon.png" weight="500px" />
  <h2>ExceptionExtensions</h2>
  
  [![NuGet](https://img.shields.io/nuget/v/Kurnakov.ExceptionExtensions.svg)](https://www.nuget.org/packages/Kurnakov.ExceptionExtensions)
