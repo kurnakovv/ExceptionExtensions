@@ -23,7 +23,16 @@ namespace ExceptionExtensions
             string source = $"Source: {ex.Source ?? "-- No source --"}";
             stringBuilder.AppendLine(source);
             stringBuilder.AppendLine(new string('#', source.Length));
-            if (ex.InnerException != null)
+            if (ex is AggregateException aggregateException &&
+                aggregateException.InnerExceptions != null &&
+                aggregateException.InnerExceptions.Count > 0)
+            {
+                foreach (Exception item in aggregateException.InnerExceptions)
+                {
+                    stringBuilder.AppendLine(item.GetFullInfo());
+                }
+            }
+            else if (ex.InnerException != null)
             {
                 stringBuilder.AppendLine(ex.InnerException.GetFullInfo());
             }
