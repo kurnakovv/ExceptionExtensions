@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Xunit;
 
 namespace ExceptionExtensions.Tests
@@ -47,6 +48,45 @@ namespace ExceptionExtensions.Tests
             // Assert.
             Assert.NotNull(message);
             Assert.Contains(ExceptionTextConstants.SOURCE_MESSAGE, message);
+        }
+
+        [Fact]
+        public void GetFullInfo_CanGetFullAggregateExceptionInfo_AggregateExceptionInfo()
+        {
+            // Arrange.
+            string message = null;
+            object[] numbers = new object[] { 1, 2, 3, 4, 5, "6" };
+
+            // Act
+            var squares = from n in numbers.AsParallel()
+                          let x = (int)n
+                          select Square(x);
+            try
+            {
+                squares.ForAll(n => Console.Write(n));
+            }
+            catch (AggregateException ex)
+            {
+                message = ex.GetFullInfo();
+            }
+            int Square(int n) => n * n;
+
+            // Assert.
+            Assert.NotNull(message);
+            Assert.Contains(AggregateExceptionTextConstants.MAIN_SOURCE_MESSAGE, message);
+#if NET5_0_OR_GREATER
+            Assert.Contains(AggregateExceptionTextConstants.SUB_SOURCE_MESSAGE_NET5_0_OR_GREATER, message);
+#endif
+#if NETCOREAPP3_1
+            Assert.Contains(AggregateExceptionTextConstants.SUB_SOURCE_MESSAGE_NETCOREAPP3_1, message);
+#endif
+            Assert.Contains(AggregateExceptionTextConstants.UNABLE_TO_CAST_OBJECT_OF_TYPE_STRING_TO_INT_MESSAGE, message);
+#if NET5_0_OR_GREATER
+            Assert.Contains(AggregateExceptionTextConstants.ONE_OR_MORE_ERRORS_OCCURRED_MESSAGE_NET5_0_OR_GREATER, message);
+#endif
+#if NETCOREAPP3_1
+            Assert.Contains(AggregateExceptionTextConstants.ONE_OR_MORE_ERRORS_OCCURRED_MESSAGE_NETCOREAPP3_1, message);
+#endif
         }
 
         [Fact]
