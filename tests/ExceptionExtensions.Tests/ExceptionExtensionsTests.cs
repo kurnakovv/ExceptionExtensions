@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
 using Xunit;
 
 namespace ExceptionExtensions.Tests
@@ -87,6 +88,23 @@ namespace ExceptionExtensions.Tests
 #if NETCOREAPP3_1
             Assert.Contains(AggregateExceptionTextConstants.ONE_OR_MORE_ERRORS_OCCURRED_MESSAGE_NETCOREAPP3_1, message);
 #endif
+        }
+
+        [Fact]
+        public void GetFullInfo_CanGetFileNameIfIsFileNotFoundException_FileName()
+        {
+            string message = null;
+            try
+            {
+                Assembly.LoadFile("C://InvalidFileName");
+            }
+            catch (Exception ex)
+            {
+                message = ex.GetFullInfo();
+            }
+            Assert.NotNull(message);
+            Assert.Contains(FileNotFoundExceptionTextConstants.MESSAGE, message);
+            Assert.Contains(FileNotFoundExceptionTextConstants.FILE_NAME_MESSAGE, message);
         }
 
         [Fact]
