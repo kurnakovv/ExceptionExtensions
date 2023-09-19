@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using Xunit;
@@ -96,7 +97,7 @@ namespace ExceptionExtensions.Tests
             string message = null;
             try
             {
-                Assembly.LoadFile(@"C:/InvalidFileName");
+                Assembly.LoadFile(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\" + "InvalidFileName");
             }
             catch (Exception ex)
             {
