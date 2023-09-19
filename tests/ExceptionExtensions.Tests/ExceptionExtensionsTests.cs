@@ -97,7 +97,7 @@ namespace ExceptionExtensions.Tests
             string message = null;
             try
             {
-                Assembly.LoadFile(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\" + "InvalidFileName");
+                Assembly.LoadFile(@"C:/InvalidFileName");
             }
             catch (Exception ex)
             {
