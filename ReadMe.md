@@ -4,7 +4,7 @@
  
  [![NuGet](https://img.shields.io/nuget/v/Kurnakov.ExceptionExtensions.svg)](https://www.nuget.org/packages/Kurnakov.ExceptionExtensions)
  [![NuGet download](https://img.shields.io/nuget/dt/Kurnakov.ExceptionExtensions.svg)](https://www.nuget.org/packages/Kurnakov.ExceptionExtensions) 
- ![Visitors](http://estruyf-github.azurewebsites.net/api/VisitorHit?user=KurnakovMaksim&repo=ExceptionExtensions&countColor=%237B1E7A&style=flat)
+ ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%kurnakovv%ExceptionExtensions&countColor=%23263759&style=flat)
   [![MIT License](https://img.shields.io/github/license/KurnakovMaksim/ExceptionExtensions?color=%230b0&style=flat)](https://github.com/KurnakovMaksim/ExceptionExtensions/blob/main/LICENSE)
  [![Build/Test](https://github.com/KurnakovMaksim/ExceptionExtensions/actions/workflows/build-test.yml/badge.svg)](https://github.com/KurnakovMaksim/ExceptionExtensions/actions/workflows/build-test.yml)
  [![CodeQL](https://github.com/KurnakovMaksim/ExceptionExtensions/workflows/CodeQL/badge.svg)](https://github.com/KurnakovMaksim/ExceptionExtensions/actions?query=workflow%3ACodeQL)
