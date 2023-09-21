@@ -13,7 +13,7 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ main, 'ee-34' ]
+    branches: [ main ]
     paths:
       - '**.cs'
       - '**.yml'

@@ -2,7 +2,7 @@ name: Build/Test
 
 on:
   push:
-    branches: [ main, 'ee-34' ]
+    branches: [ main ]
     paths:
       - '**.cs'
       - '**.yml'
