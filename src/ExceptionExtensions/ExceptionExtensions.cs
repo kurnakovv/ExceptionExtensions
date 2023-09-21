@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -38,6 +39,12 @@ namespace ExceptionExtensions
             }
             stringBuilder.AppendLine(ex.Message);
             stringBuilder.AppendLine(new string('=', ex.Message.Length));
+            if (ex is FileNotFoundException fileNotFoundException)
+            {
+                string fileName = $"File name: \"{fileNotFoundException.FileName}\"";
+                stringBuilder.AppendLine(fileName);
+                stringBuilder.AppendLine(new string('+', fileName.Length));
+            }
             if (ex.StackTrace != null)
             {
                 int stackTraceMaxLineLength = ex.StackTrace
