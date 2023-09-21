@@ -13,7 +13,7 @@ on:
 jobs:
   check-sonar-token:
    name: Check if container registry SONAR_TOKEN
-   runs-on: windows-latest
+   runs-on: ubuntu-latest
    outputs:
      have_sonar_token: ${{ steps.detect_sonar_token.outputs.have_sonar_token }}
    steps:
