@@ -16,7 +16,7 @@ namespace ExceptionExtensions
         /// <remarks>If <paramref name="ex"/> is null, method return null.</remarks>
         /// <param name="ex">Exception with full info.</param>
         /// <exception cref="ArgumentOutOfRangeException"/>
-        /// <returns>Message + InnerException + StackTrace</returns>
+        /// <returns>Message + Type + InnerException + StackTrace</returns>
         public static string GetFullInfo(this Exception ex)
         {
             if (ex == null) return null;
@@ -39,6 +39,9 @@ namespace ExceptionExtensions
             }
             stringBuilder.AppendLine(ex.Message);
             stringBuilder.AppendLine(new string('=', ex.Message.Length));
+            string exceptionType = $"Type: \"{ex.GetType()}\"";
+            stringBuilder.AppendLine(exceptionType);
+            stringBuilder.AppendLine(new string('*', exceptionType.Length));
             if (ex is FileNotFoundException fileNotFoundException)
             {
                 string fileName = $"File name: \"{fileNotFoundException.FileName}\"";
