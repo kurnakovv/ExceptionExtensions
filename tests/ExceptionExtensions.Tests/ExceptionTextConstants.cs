@@ -10,6 +10,5 @@ Index was outside the bounds of the array.
 Type: " + "\"" + "System.IndexOutOfRangeException" + "\"" + @"
 ***************************************
 ";
-        public const string EXCEPTION_TYPE_MESSAGE = @"System.IndexOutOfRangeException";
     }
 }
